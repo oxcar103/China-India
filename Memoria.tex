@@ -443,6 +443,87 @@ Aritmética, Resolución de Ecuaciones y Sistemas de Numeración} % Subtitle
 		diferenciación e integración.
 	\end{itemize}
 
+	\subsection{Sistema de numeración indio y aritmética}
+		La mayor característica y sin duda la más conocida del sistema de numeración india es el uso de un sistema posicional
+		de base 10 con cero, siendo pioneros en el uso de este sistema de numeración que está tan arraigado actualmente.
+		Usaron además una grafía muy similar a la actual y que podemos ver en la figura \ref{fig:ind_numbers}:
+		\begin{figure}[!ht]
+			\centering
+			\includegraphics[width = 14cm]{indian_numbers.jpg}
+			\caption{Símbolos utilizados en el sistema de numeración indio.}
+			\label{fig:ind_numbers}
+		\end{figure}
+
+		Una característica algo peculiar de este sistema fue que en lugar de tener un $"$.$"$ en la posición de los millares,
+		conocido como \textit{punto de los millares}, utilizaban un $"$.$"$ en la posición de las centenas, esto es, para
+		escribir un millón, ellos lo notaban \textit{1.00.00.00}.
+
+		En la multiplicación hindú, también conocida como multiplicación de Fibonacci o multiplicación en celosía se
+		dibujaba una tabla en la que se trazan las diagonales de izquierda a derecha que sirve de guía para el cálculo:
+		\begin{enumerate}
+			\item El multiplicando se escriben encima de la tabla.
+			\item El multiplicador se escribe a la derecha de la tabla.
+			\item La tabla se rellena con los productos de los dígitos que señalan cada fila y columna: las decenas se
+			escriben en la esquina superior izquierda de cada celda, y las unidades en la inferior derecha.
+			\item Se suma la tabla según las diagonales.
+			\item Si es necesario "llevarse" las decenas, se muestra la solución de arriba abajo y de izquierda a derecha
+			del borde de la tabla, llevándose las decenas en sentido inverso, como se haría de forma habitual.
+		\end{enumerate}
+
+		Para aclarar el algoritmo, se brinda la figura \ref{fig:ind_multiplication}:
+
+		\begin{figure}[!ht]
+			\centering
+			\includegraphics[width = 14cm]{indian_multiplication.png}
+			\caption{Multiplicación en celosía.}
+			\label{fig:ind_multiplication}
+		\end{figure}
+		
+		Para realizar la división utilizaba el método conocido como división por galera, que es un antiguo algoritmo de
+		división, utilizado de manera habitual hasta el siglo XVII. El nombre deriva del parecido gráfico que se genera
+		con este método y una galera. No se puede llegar a confirmar pero se cree que el origen de este método puede ser
+		árabe o hindú o chino.
+		
+		El algoritmo de esta división es:
+		\begin{enumerate}
+			\item Escribir el dividendo y dibujar una barra vertical tras el dividendo en la que iremos escribiendo el
+			cociente conforme se vaya calculando.
+			\item Escribir el divisor bajo el dividendo de tal forma que los dígitos más a la izquierda coincidan.
+			\item Suponer que el dividendo acaba donde acaba el divisor y realizar la división.\label{division}
+			\item Si el número es 0, tachamos el divisor y pasamos al siguiente paso; si no, seguimos el siguiente
+			sub-algoritmo:
+			\begin{enumerate}
+				\item Multipliclar el primer dígito por el nuevo dígito del cociente y restar del primer dígito del
+				dividendo, escribimos el resultado encima del dividendo y tachamos tanto el primer dígito del
+				dividendo como el divisor.
+				\item Operamos de igual forma con el resto de dígitos del divisor dígito a dígito, utilizando si nos
+				fuese necesario los dígitos escritos encima del dividendo como nuevo dividendo y tachándolos de igual
+				manera si varían.
+			\end{enumerate}
+			\item Volvemos a escribir el cociente debajo del último cociente pero desplazado una posición a la derecha.
+			\item Si el divisor excede por la derecha al dividendo, los números que no están tachados son el resto; si
+			no, volvemos al paso \ref{division} tomando como nuevo dividendo los números que no están tachados.
+		\end{enumerate}
+		
+		El método de la galera, aunque más complejo, es similar al método moderno de la división larga. Dado que el
+		algoritmo puede llegar a ser algo confuso, por ello, he recogido tanto el proceso paso a paso en la figura
+		\ref{fig:ind_division} como el resultado final, en el cuál, los números que no aparecen tachados en la figura
+		\ref{fig:ind_division2} son el resto y el cociente.
+
+		\begin{figure}[!ht]
+			\centering
+			\includegraphics[width = 10cm]{Galley_Method3.png}
+			\caption{División en galera paso a paso de 65284 entre 594.}
+			\label{fig:ind_division}
+		\end{figure}
+
+		\begin{figure}[!ht]
+			\centering
+			\includegraphics[width = 7cm]{Galley_Method4.png}
+			\caption{Solución final de la división en galera de 65284 entre 594.}
+			\label{fig:ind_division2}
+		\end{figure}
+		
 \section{Matemáticas destacados de la India}
 
 \newpage
